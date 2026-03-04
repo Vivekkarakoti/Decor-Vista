@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-primary: #1A1A1A;
+  --color-accent: #8B5E3C;  /* Warm Terracotta/Brown */
+  --color-beige: #D9B99B;   /* Beige/Tan */
+  --color-bg-light: #FDFCFB; /* Off-white background */
+  --color-divider: #E5E5E5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-primary bg-bg-light antialiased;
+}
+
+.section-padding {
+  @apply py-24 md:py-32 px-6 md:px-12 lg:px-24;
+}
+
+.heading-serif {
+  @apply font-serif tracking-tight;
+}
+
+.vertical-divider {
+  @apply border-l border-accent pl-8 md:pl-12;
+}
+
+.btn-primary {
+  @apply bg-accent text-white px-10 py-4 rounded-none uppercase tracking-[0.2em] text-[10px] font-bold hover:bg-primary transition-all duration-500 shadow-lg shadow-accent/10;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary px-10 py-4 rounded-none uppercase tracking-[0.2em] text-[10px] font-bold hover:bg-primary hover:text-white transition-all duration-500;
+}
